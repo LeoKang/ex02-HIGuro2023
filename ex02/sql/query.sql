@@ -18,3 +18,6 @@ SELECT * FROM tbl_board;
 
 INSERT INTO tbl_board(bno, title, content, writer)
 VALUES (seq_board.nextval, '테스트제목','테스트내용','user00');
+
+select seq_board.nextval from dual
+
