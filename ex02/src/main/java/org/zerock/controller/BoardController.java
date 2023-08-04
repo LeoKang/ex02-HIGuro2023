@@ -56,7 +56,7 @@ public class BoardController {
 	
 	@PostMapping("/remove")
 	public String remove(@RequestParam("bno") Long bno, RedirectAttributes rttr) {
-		log.info("modify:" + bno);
+		log.info("remove:" + bno);
 		
 		if(service.remove(bno)) {
 			rttr.addFlashAttribute("result", "success");
