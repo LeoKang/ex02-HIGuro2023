@@ -26,7 +26,8 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="../../../../resources/vendor/jquery/jquery.min.js"></script>
+<!-- <script src="../../../../resources/vendor/jquery/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="../../../../resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -46,6 +47,16 @@
 <!-- Page level custom scripts -->
 <script src="../../../../resources/js/demo/datatables-demo.js"></script>
 
+<script>
+$(document).ready(function() {
+	$('#dataTables-example').DataTable({
+		responsive:true
+	});
+	$(".sidebar-nav")
+	.attr("class", "sidebar-nav navbar-collapse collapse")
+	.attr("aria-expanded", 'false')
+	.attr("style","height:1px");
+});
+</script>
 </body>
-
 </html>
