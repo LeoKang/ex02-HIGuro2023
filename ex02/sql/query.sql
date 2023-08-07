@@ -14,7 +14,8 @@ CREATE TABLE tbl_board (
 ALTER TABLE TBL_BOARD ADD CONSTRAINT pk_board
 PRIMARY key(bno);
 
-SELECT * FROM tbl_board;
+SELECT * FROM tbl_board
+ORDER BY 1
 
 INSERT INTO tbl_board(bno, title, content, writer)
 VALUES (seq_board.nextval, '테스트제목','테스트내용','user00');
