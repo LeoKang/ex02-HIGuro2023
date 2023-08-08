@@ -25,21 +25,23 @@
 					<table class="table table-striped table-bordered table-hover">
 						<thead>
 							<tr>
-								<td>#번호</td>
-								<td>제목</td>
-								<td>작성자</td>
-								<td>작성일</td>
-								<td>수정일</td>
+								<th>#번호</th>
+								<th>제목</th>
+								<th>작성자</th>
+								<th>작성일</th>
+								<th>수정일</th>
 							</tr>
 						</thead>
-						
+
 						<c:forEach items="${list}" var="board">
 							<tr>
-								<td><c:out value="${board.bno}"/></td>
-								<td><c:out value="${board.title}"/></td>
-								<td><c:out value="${board.writer}"/></td>
-								<td><fmt:formatDate pattern ="yyyy-MM-dd" value="${board.regdate}"/></td>
-								<td><fmt:formatDate pattern ="yyyy-MM-dd" value="${board.updateDate}"/></td>
+								<td><c:out value="${board.bno}" /></td>
+								<td><c:out value="${board.title}" /></td>
+								<td><c:out value="${board.writer}" /></td>
+								<td><fmt:formatDate pattern="yyyy-MM-dd"
+										value="${board.regdate}" /></td>
+								<td><fmt:formatDate pattern="yyyy-MM-dd"
+										value="${board.updateDate}" /></td>
 							</tr>
 						</c:forEach>
 					</table>
@@ -50,4 +52,9 @@
 	<!-- /.container-fluid -->
 </div>
 <!-- End of Main Content -->
+<script type="text/javascript">
+#(document).ready(function() {
+	var result = '<c:out value="${result}"/>';
+});
+</script>
 <%@ include file="../includes/footer.jsp"%>
