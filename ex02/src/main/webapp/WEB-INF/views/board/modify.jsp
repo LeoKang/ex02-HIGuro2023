@@ -70,6 +70,7 @@ $(document).ready(function() {
 			formObj.attr("action", "/board/remove");
 		}else if(operation === 'list') {
 			self.location = "/board/list";
+			formObj.empty();
 			return;	
 		}
 		formObj.submit();
